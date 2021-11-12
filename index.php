@@ -438,7 +438,201 @@ $pdf->MultiCell(150, 120, 'Mon / Wed & Sat, 9:00 am – 4:00 pm', 0, 'L', 0, 0, 
 $pdf->MultiCell(90, 30, 'Saturdays 9:00 am – 4:00 pm', 0, 'L', 0, 0, '150', '110', true);
 $pdf->MultiCell(90, 30, 'Sundays 9:00 am – 4:00 pm', 0, 'L', 0, 0, '150', '115', true);
 
+$pdf->AddPage();
 
+$pdf->Write(0, 'WHAT IS YOUR OBJECTIVE FOR THE PROGRAMME BEING REGISTERED FOR?', '', 0, 'L', true, 0, false, false, 0);
+
+$OBJECTIVES='________________________________________________________________________________________________________________________________________________________________________________________________'.
+"________________________________________________________________________________________________________________________________________________________________________________________________________________________________________";
+
+$pdf->MultiCell(190, 50, $OBJECTIVES, 0, 'L', 0, 0, '7', '242', true);
+
+
+
+$pdf->Write(0, 'HOW DID YOU HEAR ABOUT VECTOR TECHNOLOGY INSTITUTE?', '', 0, 'L', true, 0, false, false, 0);
+
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(75, 4, 'Newspaper', 0, 'L', 0, 1, '126', '35', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, 'Television', 0, 'L', 0, 1, '126', '', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, 'Facebook', 0, 'L', 0, 1, '126', '', true);
+
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(75, 4, 'Walk By/Sign', 0, 'L', 0, 1, '126', '35', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, 'Radio', 0, 'L', 0, 1, '126', '', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, 'Instagram', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(75, 4, 'Website', 0, 'L', 0, 1, '126', '35', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, 'Search Engine', 0, 'L', 0, 1, '126', '', true);
+$pdf->Ln(1);
+$pdf->MultiCell(100, 4, $other, 0, 'L', 0, 1, '126', '', true);
+
+$pdf->Ln(18);
+//PROGRAMME SCHEDULE
+$pdf->Write(0, 'Referrals:', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(5);
+
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Family', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Friend', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Colleague', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, $other, 0, 'L', 0, 1, '126', '', true);
+
+$statement='I hereby certify that the information written on this application and the documents provided are true and correct. I also agree to abide by the Terms and Conditions mentioned overleaf which governs this Application for admittance to the above-mentioned programme.';
+
+$pdf->MultiCell(190, 50, $statement, 0, 'L', 0, 0, '7', '242', true);
+$pdf->setCellHeightRatio(0);
+
+$pdf->SetFont('times', '', 10);
+$pdf->MultiCell(120, 13, "Applicant's signature", 1, 'L', 1, 0, '7', '', true, 0, false, false, 0);
+$pdf->MultiCell(70, 13, 'DATE(DD/MM/YYYY)', 1, 'L', 1, 1, '', '', true, 0, false, false, 0);
+
+$pdf->Ln(5);
+
+
+$pdf->MultiCell(35, 10, 'OFFICIAL USE ONLY', 1, 'C', 1, 1, '', '', true);
+// set color for background
+$pdf->SetFillColor(255, 255, 255);
+//set font color
+$pdf->SetTextColor(0, 0, 0);
+
+$pdf->SetFont('times', '', 10);
+$pdf->MultiCell(120, 13, 'RECEIVED/WITNESS BY ', 1, 'L', 1, 0, '7', '', true, 0, false, false, 0);
+$pdf->MultiCell(70, 13, 'DATE (DD/MM/YYYY)', 1, 'L', 1, 1, '', '', true, 0, false, false, 0);
+$pdf->MultiCell(120, 13, 'PROCESSED BY', 1, 'L', 1, 0, '7', '', true, 0, false, false, 0);
+$pdf->MultiCell(70, 13, 'DATE (DD/MM/YYYY)', 1, 'L', 1, 0, '', '', true, 0, false, false, 0);
+
+
+$pdf->MultiCell(70, 13, 'MATRICULATION', 1, 'L', 1, 0, '', '', true, 0, false, false, 0);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Full', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Provisional', 0, 'L', 0, 1, '126', '', true);
+$pdf->MultiCell(5, 5, ' ', 1, 'L', 1, 1, '8', '', true);
+$pdf->MultiCell(100, 4, 'Mature Entry', 0, 'L', 0, 1, '126', '', true);
+
+$Comments='________________________________________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________________________________________________________________________________________';
+$pdf->MultiCell(190, 50, $Comments, 0, 'L', 0, 0, '7', '242', true);
+$pdf->setCellHeightRatio(0);
+
+
+$pdf->MultiCell(120, 13, 'ACCEPTANCE APPROVED BY', 1, 'L', 1, 0, '7', '', true, 0, false, false, 0);
+$pdf->MultiCell(70, 13, 'DATE (DD/MM/YYYY)', 1, 'L', 1, 1, '', '', true, 0, false, false, 0);
+
+
+$pdf->AddPage();
+
+$pdf->Write(0, 'TERMS & CONDITIONS', '', 0, 'c', true, 0, false, false, 0);
+$pdf->Write(0, 'QUALIFICATION FOR ADMISSION', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(5);
+
+$ADMstatement='To begin our programmes, participants need not any background in working with computers; however, it is necessary that the individual 
+show an affinity for working with electrical or electronic devices. Participants seeking admission to these programmes must satisfy the
+minimum matriculation requirements.';
+$pdf->Write(0, $ADMstatement, '', 0, 'L', true, 0, false, false, 0);
+
+$BADP='Bachelor & Associate Degree Programmes - five subjects at; Diploma Programme - four subject at:
+-CXC passess to Grade 3 level (from 1998)
+-GCE "O" level passes to Grade "C" level 
+-U.L.C.I subjects to the "Pass" level ';
+
+$pdf->Write(0, $BADP, '', 0, 'L', true, 0, false, false, 0);
+
+$SubjectClarity='These subjects should include English Language, Which is compulsory, and a numeric subject.';
+
+$pdf->Write(0, $SubjectClarity, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(1);
+$Completedform='The completed application form must be submitted with:
+-Proof of academic standing, and proof of Identity(Passport, Driver"s license , Birth Certificate)
+-Passport sized picture of student.
+-Marriage certificate where applicable';
+
+$pdf->Write(0, $Completedform, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(1);
+$pdf->Write(0, 'GENERAL', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+$General='It is important that students obtain a VTI Policies Handbook during orientation as the rules and regulations set out will govern the operations of
+the Institute and the conduct expected from students. All students must ensure that they inform themselves of the starting dates of their
+modules. Information is provided via the Notice Boards, the Intranet and the Internet (website). VTI reserves the right to cancel a Programme
+due to insufficient applicants and also to make changes to class times (scheduling) where necessary.';
+$pdf->Write(0, $General, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+$pdf->Write(0, 'REGISTRATION', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+$Registration='Before registration is carried out, date(s) for commencement of module/programme must be chosen from the schedule after which application
+form(s) are completed.
+NB: For the evening programmes, your space on each module cannot be guaranteed unless you have
+a) Paid up fees for, the relevant programme/module or as, per approved payment plan.
+b) Submitted an approved Purchase order for the full amount of the programme/module being registered for if sponsored.';
+
+$pdf->Write(0, $Registration, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+$pdf->Write(0, 'EXEMPTIONS', '', 0, 'L', true, 0, false, false, 0);
+$Exemptions='To be exempted from a module, a person must show that he/she has superior knowledge of the subject matter. An exemption test may be given,
+with a pass mark of 80%. An exemption fee will apply. One may also be exempted if it is adjudged by the Institute, that he/she has superior
+qualifications by submitting valid proof of such. In this case, no examination will be required.';
+$pdf->Write(0, $Exemptions, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+
+$pdf->Write(0, 'CANCELLATIONS', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+$CANCELLATIONS='Can be made but will be subjected to the following service charges:';
+$pdf->Write(0, $CANCELLATIONS, '', 0, 'L', true, 0, false, false, 0);
+
+$pdf->Ln(3);
+
+$CONDITIONS='Ten or more working days before starting date    5% of course fees';
+'Between four to ten working days before starting date     10% of course fees';
+'Less than four working days before starting date         20% of course fees';
+
+$pdf->Write(0, 'REFUNDS', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+$REFUND='Fees are refundable subject to the cancellation policy. However, once a student has started attending classes, or once the class commences,
+he/she will be liable for the full cost of the course.';
+$pdf->Write(0, $REFUND, '', 0, 'L', true, 0, false, false, 0);
+
+$pdf->Write(0, 'TRANSFERS', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+$TRANSFER='Where applicable, participants may be allowed to transfer their application to another module, however all transfers must be made five working
+days or more before commencement of module. Failure to do so will result in an imposed penalty of 50% of regular module fee. Once the module
+commences, transfers will only be allowed under exceptional circumstances and the imposed penalty will still be applied.';
+
+$pdf->Write(0, 'PLEASE NOTE', '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+$PLEASENOTE1='Where applicable it is important to register for upcoming modules by paying the required 50 % deposit of the module fee in advance of the
+scheduled starting date. The balance must be paid on commencement of the module. We encourage students to seek company sponsorship and
+submit a purchase order for all modules.';
+$pdf->Write(0, $PLEASENOTE1, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+$PLEASENOTE2='COURSE FEES ARE SUBJECT TO CHANGE, HOWEVER, STUDENTS PAYING FOR A NUMBER OF MODULES IN ADVANCE WILL NOT BE AFFECTED
+BY INCREASED COSTS, AND ONLY THIS WILL ENSURE A RESERVED SPACE IN FUTURE MODULES SINCE THE NUMBER OF STUDENTS IS
+LIMITED TO TWENTY (20). Failure to do this may result in all places being filled by students who have paid in advance.';
+$pdf->Write(0, $PLEASENOTE2, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
+
+$PLEASENOTE3='REGISTRATION IS NOT AUTOMATIC REGARDLESS OF YOUR INTENTIONS MADE ON THE REGISTRATION FORM. These terms and conditions
+along with other policies governing the Institute can be found in the VTI Policies Handbook.';
+$pdf->Write(0, $PLEASENOTE3, '', 0, 'L', true, 0, false, false, 0);
+$pdf->Ln(3);
 //Close and output PDF document
 $pdf->Output('VTI_application_form.pdf', 'I');
 
